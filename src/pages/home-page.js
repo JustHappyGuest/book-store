@@ -1,9 +1,11 @@
 import React from 'react';
-import BooksList from '../components/books-list/books-list';
+
+import BooksListContainer from '../containers/books-list-container';
+
 
 const HomePage = () => {
     return (
-        <BooksList />
+        <BooksListContainer />
     );
 }
 

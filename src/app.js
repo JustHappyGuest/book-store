@@ -1,20 +1,25 @@
-import React, {Fragment} from 'react';
+import "./app.css";
 
-import {Switch, Route} from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
+import { Switch, Route } from "react-router-dom";
+import React, { Fragment } from "react";
 
-import {withBookstoreService} from './hoc/';
+import { withBookstoreService } from "./hoc/";
+import CartPage from './pages/cart-page';
+import Header from "./components/header";
+import HomePage from "./pages/home-page";
 
-import './app.css';
-import HomePage from './pages/home-page';
-import Header from './components/header';
 
 const App = () => (
-    <Fragment>
-        <Header/>
-        <Switch>
-            <Route path="/" component = {HomePage}/>
-        </Switch>
-    </Fragment>
+  <Fragment>
+    <Header />
+    <Container>
+    <Switch>
+      <Route path="/" component={HomePage} exact />
+      <Route path="/cart" component={CartPage} exact />
+    </Switch>
+    </Container>
+  </Fragment>
 );
 
 export default withBookstoreService()(App);

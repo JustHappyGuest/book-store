@@ -1,21 +1,11 @@
-import { BOOKS_LOADED } from "../action-types";
+import booksStore from './books-store';
+import shopingCart from './shoping-cart';
 
-
-const initialState = {
-    books: [],
-    loading: true
-}
-
-const reducer = (state = initialState, { type, payload }) => {
-    switch (type) {
-        case BOOKS_LOADED:
-            return {
-                books: payload.books,
-                loading: false
-            };
-        default:
-            return state;
-    }
-}
+const reducer = (state, payload) => {
+  return {
+    booksStore: booksStore(state, payload),
+    shopingCart: shopingCart(state, payload)
+  };
+};
 
 export default reducer;

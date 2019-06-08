@@ -2,14 +2,16 @@ export default class BookstoreService{
 
     data = [
         {
-            id: 1,
+            id: 0,
             title: 'Node in action!',
-            autor: 'Someone J.Someone'
+            autor: 'Someone J.Someone',
+            price: 56
         },
         {
-            id: 2,
+            id: 1,
             title: 'React in action!',
-            autor: 'Someone J.Someone'
+            autor: 'Someone J.Someone',
+            price: 45
         }
     ];
 
